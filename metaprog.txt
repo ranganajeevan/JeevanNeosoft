@@ -1,0 +1,33 @@
+class A
+end
+
+A.class #=> Class
+Class.superclass #=> Module
+Module.superclass #=> Object
+Object.superclass #=> BasicObject
+
+BasicObject
+    |
+    |
+  Object
+    |
+    |
+  Module
+    |
+    |
+  Class
+    |
+    |
+    A
+
+A.superclass #=> Object
+
+BasicObject
+    |
+    sc
+    |
+  Object --sc-- Module
+    |           |
+    sc          sc
+    |           |
+    A    ---- Class
